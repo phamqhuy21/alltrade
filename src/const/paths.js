@@ -1,3 +1,4 @@
 export const PATH = {
-  HOME: "/",
+  TRADING: "/trading",
+  TRANSACTION: "/trading/transaction",
 };

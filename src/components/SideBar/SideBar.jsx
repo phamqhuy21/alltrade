@@ -2,13 +2,12 @@ import {
   createStyles,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   makeStyles,
 } from "@material-ui/core";
 import Dashboard from "../../assets/img/Dashboard.png";
 import AccountGroup from "../../assets/img/AccountGroup.png";
-import Diamond from "../../assets/img/Diamond.png";
+import Bot from "../../assets/img/Bot.png";
 import Exchange from "../../assets/img/Exchange.png";
 import Wallet from "../../assets/img/Wallet.png";
 import Account from "../../assets/img/Account.png";
@@ -21,10 +20,10 @@ const useStyles = makeStyles(
       root: {
         backgroundColor: "#181A20",
         color: "#fff",
-        minHeight: "95vh",
-        maxWidth: 85,
+        minHeight: "105vh",
+        width: "6%",
       },
-      iconItem: { textAlign: "center", filter: "invert(75%)" },
+      iconItem: { textAlign: "center" },
     }),
   { index: 1 }
 );
@@ -36,12 +35,14 @@ function SideBar(props) {
   return (
     <div className={classes.root}>
       <List>
-        <ListItem button>
+        <ListItem button selected={true}>
           <ListItemText
             className={classes.iconItem}
             primary={<img src={`${Exchange}`} alt="Exchange" width={25} />}
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("exchange"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("exchange"))}
+              </p>
             }
           />
         </ListItem>
@@ -50,16 +51,20 @@ function SideBar(props) {
             className={classes.iconItem}
             primary={<img src={`${Wallet}`} alt="Wallet" width={25} />}
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("wallet"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("wallet"))}
+              </p>
             }
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             className={classes.iconItem}
-            primary={<img src={`${Diamond}`} alt="Diamond" width={25} />}
+            primary={<img src={`${Bot}`} alt="Diamond" width={25} />}
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("vipMember"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("tradingBot"))}
+              </p>
             }
           />
         </ListItem>
@@ -70,7 +75,9 @@ function SideBar(props) {
               <img src={`${AccountGroup}`} alt="AccountGroup" width={25} />
             }
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("referral"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("referral"))}
+              </p>
             }
           />
         </ListItem>
@@ -79,7 +86,9 @@ function SideBar(props) {
             className={classes.iconItem}
             primary={<img src={`${Account}`} alt="Account" width={25} />}
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("profile"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("profile"))}
+              </p>
             }
           />
         </ListItem>
@@ -88,7 +97,9 @@ function SideBar(props) {
             className={classes.iconItem}
             primary={<img src={`${Dashboard}`} alt="Dashboard" width={25} />}
             secondary={
-              <p style={{ fontSize: "12px" }}>{jsUcfirst(t("dashBoard"))}</p>
+              <p style={{ fontSize: "12px", color: "#848E9C" }}>
+                {jsUcfirst(t("dashBoard"))}
+              </p>
             }
           />
         </ListItem>

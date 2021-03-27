@@ -21,6 +21,7 @@ const useStyles = makeStyles(
     createStyles({
       root: {
         flexGrow: 1,
+        paddingBottom: 8,
       },
       appBar: { backgroundColor: "#181A20" },
       toolBar: { color: "#888888" },
